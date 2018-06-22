@@ -17,8 +17,9 @@ class WechatController extends Controller
 
         $app = app('wechat.official_account');
         // 关注成功信息
+        $current = $app->menu->current();
         $app->server->push(function($message){
-            return $message;
+            return $current;
         });
 
         return $app->server->serve();
