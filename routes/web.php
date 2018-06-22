@@ -10,6 +10,15 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+// Temp Routes
+Route::get('/test_post',function(){
+    return view('post_form');
+});
+Route::post('/test_post/print','MsgController@test_post');
+
+
+
+
 Route::get('/server',function(){
     // 一些配置
     $config = [

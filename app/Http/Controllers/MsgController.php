@@ -7,6 +7,10 @@ use EasyWeChat\Factory;
 class MsgController extends Controller
 {
     //
+    public function test_post(Request $request) {
+        print $request;
+
+    }
 
     public function text() {
         // 一些配置
@@ -24,11 +28,9 @@ class MsgController extends Controller
         // 使用配置来初始化一个公众号应用实例。
         $app =  Factory::officialAccount($config);
         $app->server->push(function(){
-            use EasyWeChat\Kernel\Messages\Text;
-            // or
-            $text = new Text();
+            $text = new EasyWeChat\Kernel\Messages\Text();
             $text->content = '您好！overtrue。';
             return $text;
-        }
+        });
     }
 }
