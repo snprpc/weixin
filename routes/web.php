@@ -21,7 +21,7 @@ Route::get('/server',function(){
 
         'log' => [
           'level' => 'debug',
-          'file' => __DIR__.'/wechat.log',
+          'file' => __DIR__.'../storage/logs/wechat.log',
         ],
     ];
 
