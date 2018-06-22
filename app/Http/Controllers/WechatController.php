@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Handle\JudjeStyleHandler;
 use Illuminate\Http\Request;
 use Log;
+use EasyWeChat\Kernel\Messages\Text;
+
 class WechatController extends Controller
 {
     /**
@@ -16,14 +19,17 @@ class WechatController extends Controller
         Log::info('request arrived.'); # 注意：Log 为 Laravel 组件，所以它记的日志去 Laravel 日志看，而不是 EasyWeChat 日志
 
         $app = app('wechat.official_account');
-        // 关注成功信息
+        // $app->server->push(MessageLogHandler::class);
+        // $app->server->push(MessageReplyHandler::class);
         $app->server->push(function($message){
             switch ($message['MsgType']) {
                 case 'event':
                     return '收到事件消息';
                     break;
                 case 'text':
-                    return '收到文字消息';
+                    $text = new Text();
+                    $text->content = "你好";
+                    return $text;
                     break;
                 case 'image':
                     return '收到图片消息';
@@ -48,6 +54,7 @@ class WechatController extends Controller
                     break;
             }
         });
+        // $app->server->push();
         return $app->server->serve();
     }
 }
