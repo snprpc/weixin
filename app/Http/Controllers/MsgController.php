@@ -12,7 +12,7 @@ class MsgController extends Controller
 
     }
 
-    public function text() {
+    public function text(Request $request) {
         // 一些配置
         $config = [
             'app_id' => 'wx8ac5d4e87ef72f88',
