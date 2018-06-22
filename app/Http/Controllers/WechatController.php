@@ -53,31 +53,56 @@ class WechatController extends Controller
             }
         });
         $buttons = [
-            [
-                "type" => "click",
-                "name" => "今日歌曲",
-                "key"  => "V1001_TODAY_MUSIC"
-            ],
-            [
-                "name"       => "菜单",
-                "sub_button" => [
-                    [
-                        "type" => "view",
-                        "name" => "搜索",
-                        "url"  => "http://www.soso.com/"
-                    ],
-                    [
-                        "type" => "view",
-                        "name" => "视频",
-                        "url"  => "http://v.qq.com/"
-                    ],
-                    [
-                        "type" => "click",
-                        "name" => "赞一下我们",
-                        "key" => "V1001_GOOD"
-                    ],
+        [
+            "name": "文章",
+            "sub_button":[
+                [
+                    "type":"click",
+                    "name":"影评",
+                    "key": "yingping"
                 ],
-            ],
+                [
+                    "type":"click",
+                    "name":"散文",
+                    "key":"sanwen"
+                ],
+                [
+                    "type":"click",
+                    "name":"微小说",
+                    "key":"weixiaoshuo"
+                ]
+            ]
+        ],
+        [
+            "name": "活动",
+            "sub_button": [
+                [
+                    "type": "click",
+                    "name": "线下活动",
+                    "key": "xianxiahuodong"
+                ],
+                [
+                    "type": "click",
+                    "name": "互动",
+                    "key": "hudong"
+                ]
+            ]
+        ],
+        [
+            "name": "关于我们",
+            "sub_button": [
+                [
+                    "type": "click",
+                    "name": "线下活动",
+                    "key": "xianxiahuodong"
+                ],
+                [
+                    "type": "click",
+                    "name": "商业合作",
+                    "key": "shangyehuodong"
+                ]
+            ]
+        ]
         ];
         $app->menu->create($buttons);
         return $app->server->serve();
