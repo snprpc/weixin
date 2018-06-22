@@ -27,9 +27,7 @@ class WechatController extends Controller
                     return '收到事件消息';
                     break;
                 case 'text':
-                    $text = new Text();
-                    $text->setAttribute('content', '您好.');
-                    return $text;
+                    return '收到文字消息';
                     break;
                 case 'image':
                     return '收到图片消息';
@@ -54,7 +52,34 @@ class WechatController extends Controller
                     break;
             }
         });
-        // $app->server->push();
+        $buttons = [
+            [
+                "type" => "click",
+                "name" => "今日歌曲",
+                "key"  => "V1001_TODAY_MUSIC"
+            ],
+            [
+                "name"       => "菜单",
+                "sub_button" => [
+                    [
+                        "type" => "view",
+                        "name" => "搜索",
+                        "url"  => "http://www.soso.com/"
+                    ],
+                    [
+                        "type" => "view",
+                        "name" => "视频",
+                        "url"  => "http://v.qq.com/"
+                    ],
+                    [
+                        "type" => "click",
+                        "name" => "赞一下我们",
+                        "key" => "V1001_GOOD"
+                    ],
+                ],
+            ],
+        ];
+        $app->menu->create($buttons);
         return $app->server->serve();
     }
 }
