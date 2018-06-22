@@ -5,7 +5,7 @@
         <title></title>
     </head>
     <body>
-        <form class="" action="/test_post/print" method="post">
+        <form class="" action="/server" method="post">
             <input type="text" name="" value="test">
             <button type="submit" name="button">提交POST请求</button>
         </form>
