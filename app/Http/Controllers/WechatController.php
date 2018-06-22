@@ -54,8 +54,8 @@ class WechatController extends Controller
         });
         $buttons = [
         [
-            "name": "文章",
-            "sub_button":[
+            "name"      =>  "文章",
+            "sub_button"=>  [
                 [
                     "type":"click",
                     "name":"影评",
@@ -74,8 +74,8 @@ class WechatController extends Controller
             ],
         ],
         [
-            "name": "活动",
-            "sub_button": [
+            "name"      =>  "活动",
+            "sub_button"=>  [
                 [
                     "type": "click",
                     "name": "线下活动",
@@ -89,8 +89,8 @@ class WechatController extends Controller
             ],
         ],
         [
-            "name": "关于我们",
-            "sub_button": [
+            "name"      =>  "关于我们",
+            "sub_button"=>  [
                 [
                     "type": "click",
                     "name": "线下活动",
