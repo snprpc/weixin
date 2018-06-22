@@ -19,7 +19,7 @@ class WechatController extends Controller
         // 关注成功信息
         $current = $app->menu->current();
         $app->server->push(function($message){
-            return $current->toArray();
+            return $current->toString();
         });
 
         return $app->server->serve();
