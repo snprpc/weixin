@@ -4,14 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Log;
-class Wechatontroller extends Controller
+class WechatController extends Controller
 {
     /**
      * 处理微信的请求消息
      *
      * @return string
      */
-    public function serve()
+    public function server()
     {
         Log::info('request arrived.'); # 注意：Log 为 Laravel 组件，所以它记的日志去 Laravel 日志看，而不是 EasyWeChat 日志
 
