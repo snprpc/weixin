@@ -10,6 +10,29 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/server',function(){
+
+    // 一些配置
+    $config = [
+        'app_id' => 'wx5b2c1fd704dbd34a',
+        'secret' => '5be2399840faacdb5005f1e14013376d',
+
+        'response_type' => 'array',
+
+        'log' => [
+          'level' => 'debug',
+          'file' => __DIR__.'/wechat.log',
+        ],
+    ];
+
+    // 使用配置来初始化一个公众号应用实例。
+    $app =  EasyWeChat\Factory::officialAccount($config);
+
+    $response = $app->server->serve();
+
+    // 将响应输出
+    return $response;
+});
 
 Route::get('/', function () {
     return view('welcome');
