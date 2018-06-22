@@ -28,7 +28,7 @@ class WechatController extends Controller
                     break;
                 case 'text':
                     $text = new Text();
-                    $text->content = "你好";
+                    $text->setAttribute('content', '您好.');
                     return $text;
                     break;
                 case 'image':
