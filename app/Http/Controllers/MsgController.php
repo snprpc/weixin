@@ -29,7 +29,7 @@ class MsgController extends Controller
         $app =  Factory::officialAccount($config);
         $app->server->push(function(){
             $text = new EasyWeChat\Kernel\Messages\Text();
-            $text->content = '您好！overtrue。';
+            $text->content = '您好！展老大。';
             return $text;
         });
     }

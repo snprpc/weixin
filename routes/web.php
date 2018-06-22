@@ -34,10 +34,11 @@ Route::get('/server',function(){
     ];
     // 使用配置来初始化一个公众号应用实例。
     $app =  EasyWeChat\Factory::officialAccount($config);
-    $response = $app->server->serve();
-
-    // 将响应输出
-    return $response;
+    $app->server->push(function(){
+        $text = new EasyWeChat\Kernel\Messages\Text();
+        $text->content = '您好！展老大。';
+        return $text;
+    });
 });
 
 // 消息接口
