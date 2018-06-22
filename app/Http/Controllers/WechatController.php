@@ -70,8 +70,8 @@ class WechatController extends Controller
                     "type":"click",
                     "name":"微小说",
                     "key":"weixiaoshuo"
-                ]
-            ]
+                ],
+            ],
         ],
         [
             "name": "活动",
@@ -85,8 +85,8 @@ class WechatController extends Controller
                     "type": "click",
                     "name": "互动",
                     "key": "hudong"
-                ]
-            ]
+                ],
+            ],
         ],
         [
             "name": "关于我们",
@@ -100,9 +100,9 @@ class WechatController extends Controller
                     "type": "click",
                     "name": "商业合作",
                     "key": "shangyehuodong"
-                ]
-            ]
-        ]
+                ],
+            ],
+        ],
         ];
         $app->menu->create($buttons);
         return $app->server->serve();
