@@ -1,0 +1,2 @@
+[2018-06-22 02:52:53] NULL.DEBUG: Request received: {"method":"GET","uri":"http://192.168.10.10/server","content-type":null,"content":""} 
+[2018-06-22 02:52:53] NULL.DEBUG: Server response created: {"content":"success"} 
