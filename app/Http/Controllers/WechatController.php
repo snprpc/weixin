@@ -17,11 +17,10 @@ class WechatController extends Controller
 
         $app = app('wechat.official_account');
         // 关注成功信息
-        $current = $app->menu->current();
         $app->server->push(function($message){
-            return $current->toString();
+            return '欢迎关注我！';
         });
-
+        $app->menu->delete(); // 全部
         return $app->server->serve();
     }
 
