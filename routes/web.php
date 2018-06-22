@@ -11,7 +11,6 @@
 |
 */
 Route::get('/server',function(){
-
     // 一些配置
     $config = [
         'app_id' => 'wx8ac5d4e87ef72f88',
@@ -24,19 +23,16 @@ Route::get('/server',function(){
           'file' => __DIR__.'/../storage/logs/wechat.log',
         ],
     ];
-
     // 使用配置来初始化一个公众号应用实例。
     $app =  EasyWeChat\Factory::officialAccount($config);
-
-
-
-
-
     $response = $app->server->serve();
 
     // 将响应输出
     return $response;
 });
+
+// 消息接口
+Route::post('/msg/text','MsgController@text');
 
 Route::get('/', function () {
     return view('welcome');
