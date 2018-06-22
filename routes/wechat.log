@@ -2,3 +2,7 @@
 [2018-06-21 12:12:22] NULL.DEBUG: Server response created: {"content":"success"} 
 [2018-06-21 12:21:15] NULL.DEBUG: Request received: {"method":"GET","uri":"http://192.168.10.10/server","content-type":null,"content":""} 
 [2018-06-21 12:21:15] NULL.DEBUG: Server response created: {"content":"success"} 
+[2018-06-22 01:39:02] NULL.DEBUG: Request received: {"method":"GET","uri":"http://192.168.10.10/server","content-type":null,"content":""} 
+[2018-06-22 01:39:02] NULL.DEBUG: Server response created: {"content":"success"} 
+[2018-06-22 01:53:30] NULL.DEBUG: Request received: {"method":"GET","uri":"http://192.168.10.10/server","content-type":null,"content":""} 
+[2018-06-22 01:53:30] NULL.DEBUG: Server response created: {"content":"success"} 

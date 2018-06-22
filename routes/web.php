@@ -14,8 +14,8 @@ Route::get('/server',function(){
 
     // 一些配置
     $config = [
-        'app_id' => 'wx5b2c1fd704dbd34a',
-        'secret' => '5be2399840faacdb5005f1e14013376d',
+        'app_id' => 'wx8ac5d4e87ef72f88',
+        'secret' => '8afd403fec8b641825ed5b59961d81aa',
 
         'response_type' => 'array',
 
@@ -27,6 +27,10 @@ Route::get('/server',function(){
 
     // 使用配置来初始化一个公众号应用实例。
     $app =  EasyWeChat\Factory::officialAccount($config);
+
+
+
+
 
     $response = $app->server->serve();
 
