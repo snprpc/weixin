@@ -71,9 +71,9 @@ class WechatController extends Controller
 
         ],
         [
-            "name"      =>  "活动",
+            "name"      =>  "线下活动",
             "type"      =>  "view",
-            "url"       =>  "119.23.206.250",
+            "url"       =>  "http://119.23.206.250",
         ],
         [
             "name"      =>  "关于我们",
