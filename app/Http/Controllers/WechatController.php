@@ -54,52 +54,44 @@ class WechatController extends Controller
         });
         $buttons = [
         [
-            "name"      =>  "文章",
+            "name"      =>  "我的所有",
             "sub_button"=>  [
                 [
-                    "type"  =>  "click",
-                    "name"  =>  "影评",
-                    "key"   =>  "yingping"
+                    "type"  =>  "view",
+                    "name"  =>  "文章",
+                    "url"   =>  "http://119.23.206.250"
                 ],
                 [
-                    "type"  =>  "click",
-                    "name"  =>  "散文",
-                    "key"   =>  "sanwen"
+                    "type"  =>  "view",
+                    "name"  =>  "电台",
+                    "url"   =>  "http://119.23.206.250"
                 ],
-                [
-                    "type"  =>  "click",
-                    "name"  =>  "微小说",
-                    "key"   =>  "weixiaoshuo"
-                ],
+
             ],
+
         ],
         [
             "name"      =>  "活动",
-            "sub_button"=>  [
-                [
-                    "type"  =>  "click",
-                    "name"  =>  "线下活动",
-                    "key"   =>  "xianxiahuodong"
-                ],
-                [
-                    "type"  =>  "click",
-                    "name"  =>  "互动",
-                    "key"   =>  "hudong"
-                ],
-            ],
+            "type"      =>  "view",
+            "url"       =>  "119.23.206.250",
         ],
         [
             "name"      =>  "关于我们",
             "sub_button"=>  [
                 [
                     "type"  =>  "click",
-                    "name"  =>  "线下活动",
-                    "key"   =>  "xianxiahuodong"
+                    "name"  =>  "商业合作",
+                    "key"   =>  "shangyehuodong"
                 ],
                 [
                     "type"  =>  "click",
-                    "name"  =>  "商业合作",
-                    "key"   =>  "shangyehuodong"
+                    "name"  =>  "小报告",
+                    "key"   =>  "xiaobaogao"
+                ],
+                [
+                    "type"  =>  "click",
+                    "name"  =>  "联系我们",
+                    "key"   =>  "lianxiwomen"
                 ],
             ],
         ],
